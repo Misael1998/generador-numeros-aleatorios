@@ -10,7 +10,7 @@ def main():
     if metodo == 1:
         print('Selecciones los parametros para generar 50 numeros aleatorios')
         print('Semilla:')
-        semilla = int(input)
+        semilla = int(input())
         print('Digitos significativos:')
         dgt = int(input())
 
