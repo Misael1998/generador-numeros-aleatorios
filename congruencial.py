@@ -1,3 +1,4 @@
+import collections
 class AleatorioCongruencial:
     def __init__(self):
         self.semilla = 15
@@ -30,8 +31,10 @@ class AleatorioCongruencial:
         if len(cola_local) == 0:
             return 0, 0
         else:
-            col = len(cola_local) - len(set(cola_local))
-            periodo = len(cola_local)
+            repedios = [x for x, y in collections.Counter(cola_local).items() if y > 1]
+            cola_set = set(cola_local)
+            col = len(cola_set) - len(repedios)
+            periodo = len(cola_set)
             return col, periodo
 
 
