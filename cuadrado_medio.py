@@ -1,14 +1,11 @@
-import collections
 class AleatorioMedio:
     def __init__(self):
         self.semilla = 12345678
         self.dgt_significativo = 4
-        self.cola = []
     
     def __init__(self, semilla, dgt_significativo):
         self.semilla = semilla 
         self.dgt_significativo = dgt_significativo
-        self.cola = []
 
     def generar_numero_aleatorio(self):
         cuadrado = self.semilla ** 2
@@ -16,7 +13,6 @@ class AleatorioMedio:
         if self.dgt_significativo >= len(sem):
             self.semilla = int(sem)
             alt = int(sem) / (10**self.dgt_significativo)
-            self.cola.append(self.semilla)
             return alt 
         else: 
             i = 0
@@ -26,9 +22,7 @@ class AleatorioMedio:
                 else:
                     sem = sem[1:]
                 i += 1
-
             self.semilla = int(sem)
             alt = int(sem) / (10**self.dgt_significativo)
-            self.cola.append(self.semilla)
             return alt
     

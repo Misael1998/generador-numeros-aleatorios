@@ -19,8 +19,19 @@ class AleatorioCongruencial:
            xn = (multiplicador*self.semilla + self.constante_aditiva) % self.mudulo 
            self.cola.append(xn)
            return xn
-        else:
+       else:
             sem = cola_local[ len(cola_local) - 1 ]
             xn = (multiplicador*sem + self.constante_aditiva) % self.modulo
             self.cola.append(xn)
             return(xn)
+
+    def obtener_cola_periodo(self):
+        cola_local = self.cola
+        if len(cola_local) == 0:
+            return 0, 0
+        else:
+            col = len(cola_local) - len(set(cola_local))
+            periodo = len(cola_local)
+            return col, periodo
+
+
