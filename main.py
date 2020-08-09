@@ -10,11 +10,11 @@ def main():
     dgt = int(input())
 
     alt = AleatorioMedio(semilla, dgt)
+    s = []
     for _ in range(50):
-        # print(alt.generar_numero_aleatorio())
-        s = alt.generar_numero_aleatorio()
+        s.append(alt.generar_numero_aleatorio())
 
-    alt.obtener_cola()
+    print(s)
 
 
 if __name__ == "__main__":

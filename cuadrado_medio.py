@@ -32,11 +32,3 @@ class AleatorioMedio:
             self.cola.append(self.semilla)
             return alt
     
-    def obtener_cola(self):
-        cola_local = self.cola
-        seen = set(cola_local)
-        uniq = []
-        for item in cola_local:
-            if item not in cola_local:
-                uniq.append(item)
-        print(cola_local)
